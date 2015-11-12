@@ -187,7 +187,7 @@ function draw_map(world){
 	function set_fill_color(key) {
 		var color_values = {'Armed Assault': '#8dd3c7', 'Assassination': '#ffffb3', 'Bombing/Explosion': '#bebada','Facility/Infrastructure Attack': '#fb8072',
 		'Hijacking': '#80b1d3','Hostage Taking (Barricade Incident)': '#fdb462','Hostage Taking (Kidnapping)': '#b3de69','Unarmed Assault': '#fccde5'};
-		if
+		if(key === null) return "#d3d3d3"
 		return color_values[key];
 	}
 
