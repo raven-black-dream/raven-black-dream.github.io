@@ -241,7 +241,12 @@ function draw_map(world){
 	function zoomed() {
   	svg.style("stroke-width", 1.5 / d3.event.scale + "px");
   	svg.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
-}
+	}
+	// If the drag behavior prevents the default click,
+	// also stop propagation so we don’t click-to-zoom.
+	function stopped() {
+  	if (d3.event.defaultPrevented) d3.event.stopPropagation();
+	}
 
 };
 String.prototype.replaceAll = function(search, replace) {
