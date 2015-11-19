@@ -43,7 +43,7 @@ h2 {
 		.attr('class', 'd3-tip')
 		.offset([10,0])
 		.style("line-height", 1)
-		.style("background", "rgba(236, 232, 197, 0.5)")
+		.style("background", "rgba(236, 232, 197, 0.7)")
 		.html(function(d){
 			return "<strong>Date:</strong> <span>" + d.date + "</span><br>" +
 			"<strong>Incident Type:</strong> <span>" + d.attack_type + "</span><br>" +
@@ -89,7 +89,8 @@ h2 {
 		.attr('d', path)
 		.on('click', clicked)
 		.attr("fill", "#d3d3d3")
-		.style('stroke', '#000000');
+		.style('stroke', '#000000')
+		.style('stroke-width', 0.5);
 
 
 		
