@@ -85,7 +85,7 @@ h2 {
 		.enter()
 		.append('path')
 		.attr('class', function(d){
-			return d.properties.ADMIN.replaceAll(" ", "_") })
+			return d.properties.admin.replaceAll(" ", "_") })
 		.attr('d', path)
 		.on('click', clicked)
 		.attr("fill", "#d3d3d3")
