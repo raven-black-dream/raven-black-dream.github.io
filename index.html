@@ -241,7 +241,7 @@ h2 {
 			}
 			active.classed("active", false);
 			active = d3.select(this);
-			active.attr('class', d.properties.ADMIN.replaceAll(' ', '_')).classed('active', true);
+			active.attr('class', d.properties.admin.replaceAll(' ', '_')).classed('active', true);
 			active.attr("fill", "#d3d3d3")
 			var bounds = path.bounds(d),
 			dx = bounds[1][0] - bounds[0][0],
