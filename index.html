@@ -159,7 +159,9 @@ h2 {
 			.attr('fill', function(d){
 				
 				return color_values[d];
-			});
+			})
+			.style('stroke', '#000000')
+			.style('stroke-width', 0.1);
 			legend.append('text')
 			.attr('y', function(d, i) {
 				return i * 20 + 5;
