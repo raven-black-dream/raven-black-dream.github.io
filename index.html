@@ -166,8 +166,13 @@ h3 {
 				
 				return color_values[d];
 			})
+<<<<<<< HEAD
 			.style('stroke', "#000000")
 			.style('stroke-width', 0.25);
+=======
+			.style('stroke', '#000000')
+			.style('stroke-width', 0.5);
+>>>>>>> origin/master
 			legend.append('text')
 			.attr('y', function(d, i) {
 				return i * 20 + 5;
@@ -273,6 +278,35 @@ h3 {
 
 				
 			};
+<<<<<<< HEAD
+=======
+			g.append('g')
+			.attr('class', 'point')
+			.selectAll('circle')
+			.data(country_data)
+			.enter()
+			.append('circle')
+			.attr('class', 'data_point')
+			.attr('cx', function(d){
+				return projection([+ d.lon, + d.lat])[0];
+			})
+			.attr('cy', function(d){
+				return projection([+ d.lon, + d.lat])[1];
+			})
+			.attr('fill', function(d){
+				return set_fill_color(d.attack_type)
+			})
+			.attr('r', 2)
+			.attr('opacity', 0.5)
+			.style('stroke', "#000000")
+			.style('stroke-width', 0.25)
+			.on("mouseover", tip.show)
+			.on('mouseout', tip.hide)
+			.transition()
+			.duration(400)
+			.delay(300);
+			
+>>>>>>> origin/master
 
 		var year = 1994;
 		var data_point_interval	= setInterval(function() {
