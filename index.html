@@ -399,7 +399,7 @@ h3 {
 			.ticks(20)
 			.tickFormat(function(d){ return formatter(d) })
 			.stepValues(years)
-			.callback(function(evt){ update_datapoints([1994, slider.value()], data)});
+			.callback(function(evt){ update_map([1994, slider.value()], data)});
 
 			var slide = d3.select('div.slider')
 			.call(slider);
